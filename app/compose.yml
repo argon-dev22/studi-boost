@@ -8,3 +8,12 @@ services:
       - "3000:3000"
     working_dir: /app
     command: ["npm", "run", "dev"]
+
+  backend:
+    build: ./backend
+    image: argon/studi-boost/backend
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8080:8080"
+    working_dir: /app
