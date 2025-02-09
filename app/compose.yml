@@ -1,7 +1,7 @@
 services:
-  sample-service:
-    build: ./sample-container
-    image: output_image_name
+  frontend:
+    build: ./frontend
+    image: frontend
     volumes:
-      - ./sample-container:/app
+      - ./frontend:/app
     command: ["sleep", "infinity"]
