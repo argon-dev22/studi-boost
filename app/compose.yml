@@ -1,7 +1,10 @@
 services:
   frontend:
     build: ./frontend
-    image: frontend
+    image: argon/studi-boost/frontend
     volumes:
       - ./frontend:/app
-    command: ["sleep", "infinity"]
+    ports:
+      - "3000:3000"
+    working_dir: /app
+    command: ["npm", "run", "dev"]
